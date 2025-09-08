@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "UX Scraper: print",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": [
+        "applypilot_ux.py",
+        "--print",
+        "-k", "ux,designer",
+        "--include-countries", "United States,Australia,Anywhere",
+        "--days", "60",
+        "--max", "1000"
+      ],
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "UX Scraper: CSV+JSON",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": [
+        "applypilot_ux.py",
+        "--print",
+        "-k", "ux,designer",
+        "--include-countries", "United States,Australia,Anywhere",
+        "--days", "90",
+        "--max", "1000",
+        "-o", "jobs.csv",
+        "--json", "jobs.json"
+      ],
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "UX Scraper: Email batches",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": [
+        "applypilot_ux.py",
+        "--print",
+        "--email",
+        "-k", "ux,designer,ux researcher,product designer",
+        "--include-countries", "United States,Australia,Anywhere",
+        "--days", "365",
+        "--max", "5000"
+      ],
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+# Virtual environments
+.venv/
+__pycache__/
+
+# OS / editor files
+.DS_Store
+*.swp
+*.swo
+
+# Logs and outputs
+logs/
+runs/
+data/
+
+# Secrets
+.env
+*.bak
+*.tmp
+_share_snapshot/
